@@ -6,11 +6,10 @@ import { ValidationPipe } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 
 async function bootstrap() {
-  const cors = require('cors');
   const app = await NestFactory.create(AppModule);
 
   app.enableCors({
-    origin: ['http://localhost:3000'],
+    origin: '*',
     credentials: true,
   });
   app.useLogger(app.get(Logger));
