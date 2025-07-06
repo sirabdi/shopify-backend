@@ -1,0 +1,14 @@
+vesrion: 0.2
+phases:
+  install:
+    runtime-version:
+      nodejs: latest
+    commands:
+      - npm install
+  build:
+    commands:
+      - npm primsa generate
+      - npm run build
+artifacts:
+  files:
+    - '**/*'
