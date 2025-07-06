@@ -1,4 +1,4 @@
-vesrion: 0.2
+version: 0.2
 phases:
   install:
     runtime-version:
@@ -7,7 +7,7 @@ phases:
       - npm install
   build:
     commands:
-      - npm primsa generate
+      - npx prisma generate
       - npm run build
 artifacts:
   files:
